@@ -17,23 +17,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('feladatok', function () {
+
+
+Route::get('/feladatok', function () {
     return view('feladatok');
 });
-Route::view('/','welcome',['name'=>'John']);
-
-
-Route::get('/past-array',function(){
-    $tasks=[
+Route::view('/', 'welcome', ['name' =>'John']);
+Route::get('/pass-array', function () {
+    $tasks = [
         'Go to the store',
         'Go to the market',
-        'Go to the work',
+        'Go to the work'
     ];
-    $footbar ('footbar');
-    return view('tasklist'-withTasks($tasks)->withFOO($footbar)
-);
+    return view('tasklist')->with(['foo'=>$foobar, 'tasks' =>$tasks]);
+
 });
-return view('tasklist'->with([
-    'foo'=>$footbar,
-    'tasks'=>$tasks
-]));
+Route::get('/feladatok', function () {
+    return view('feladatok');
+});

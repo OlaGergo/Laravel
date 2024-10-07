@@ -1,12 +1,10 @@
- <!--<ul>
-    <?php foreach($tasks as $tasks):?>
-        <li><?=$tasks;?></li>
-    <?php endforeach; ?>
-</ul> -->
 <ul>
-        @foreach($tasks as $task)
-        <li>{{$task}} </li>
-        @endforeach 
+    <?php foreach($tasks as $task) : ?>
+    <li><?=$task; ?></li>
+    <?php endforeach; ?>
 </ul>
-
-<div>{{$foo}}</div>
+<ul>
+    @foreach($tasks as $task)
+    <li>{{$task}}</li>
+    @endforeach
+</ul>

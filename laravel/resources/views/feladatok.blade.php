@@ -1,13 +1,6 @@
 <?php
-$username='John';
-return view('welcome',['name'=>$username]);
-
+$username = 'John';
+return view('tasklist')->withTasks($tasks);
+$foobar = 'foobar';
+return view('tasklist')->withTasks($tasks)->withFoo($foobar);
 ?>
-
- <body>
-    <div>Hi,<?php echo $username ?></div>
- </body>
-
-
- Hi,<?php $username?>
-
